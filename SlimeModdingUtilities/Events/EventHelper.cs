@@ -60,7 +60,7 @@ namespace SMU.Events
         }
 
 
-        public static void InvokeAll<T1, T2, T3>(Action<T1, T2, T3> action, params object[] args)
+        public static void InvokeAll<T1, T2, T3>(this Action<T1, T2, T3> action, params object[] args)
         {
             Delegate[] actions = action?.GetInvocationList();
             if (actions == null) return;
@@ -79,7 +79,7 @@ namespace SMU.Events
                 }
             }
         }
-        public static void InvokeAll<T1, T2>(Action<T1, T2> action, params object[] args)
+        public static void InvokeAll<T1, T2>(this Action<T1, T2> action, params object[] args)
         {
             Delegate[] actions = action?.GetInvocationList();
             if (actions == null) return;
@@ -99,7 +99,7 @@ namespace SMU.Events
             }
         }
 
-        public static void InvokeAll<T>(Action<T> action, params object[] args)
+        public static void InvokeAll<T>(this Action<T> action, params object[] args)
         {
             Delegate[] actions = action?.GetInvocationList();
             if (actions == null) return;
@@ -118,7 +118,7 @@ namespace SMU.Events
                 }
             }
         }
-        public static void InvokeAll(Action action, params object[] args)
+        public static void InvokeAll(this Action action, params object[] args)
         {
             Delegate[] actions = action?.GetInvocationList();
             if (actions == null) return;
