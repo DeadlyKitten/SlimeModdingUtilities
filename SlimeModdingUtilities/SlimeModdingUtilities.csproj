@@ -71,7 +71,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Characters.cs" />
+    <Compile Include="Constants\Stages.cs" />
     <Compile Include="Events\EventHelper.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PluginInfo.cs" />
@@ -89,9 +92,7 @@
     <Content Include="Refs\UnityEngine.dll" />
     <Content Include="Refs\UnityEngine.ImageConversionModule.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if $(ConfigurationName) == Debug (
