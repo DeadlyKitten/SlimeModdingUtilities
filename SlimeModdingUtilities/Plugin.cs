@@ -5,7 +5,7 @@ using System;
 namespace SMU
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
-    public class Plugin : BaseUnityPlugin
+    class Plugin : BaseUnityPlugin
     {
         static Plugin Instance;
 
