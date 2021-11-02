@@ -34,6 +34,7 @@
     <DocumentationFile>bin\Release\SlimeModdingUtilities.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="External\manifest.json" />
     <None Include="SlimeModdingUtilities.csproj.user" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,7 @@
     <Compile Include="Utilities\SharedCoroutineStarter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="External\icon.png" />
     <Content Include="Refs\0Harmony.dll" />
     <Content Include="Refs\Assembly-CSharp.dll" />
     <Content Include="Refs\BepInEx.dll" />
@@ -99,4 +101,9 @@
 copy /Y "$(TargetPath)" "$(GameDir)\BepInEx\plugins"
 )</PostBuildEvent>
   </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties external_4manifest_1json__JsonSchema="https://https://json.schemastore.org/package.manifest.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
