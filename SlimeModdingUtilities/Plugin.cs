@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using System;
+using HarmonyLib;
 
 namespace SMU
 {
@@ -17,6 +18,9 @@ namespace SMU
                 return;
             }
             Instance = this;
+
+            var harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+            harmony.PatchAll();
         }
 
         #region logging
