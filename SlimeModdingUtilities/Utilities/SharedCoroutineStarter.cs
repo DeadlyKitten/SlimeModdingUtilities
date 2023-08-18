@@ -17,7 +17,11 @@ namespace SMU.Utilities
         /// <returns>The started Coroutine.</returns>
         public static new Coroutine StartCoroutine(IEnumerator routine)
         {
-            _instance ??= new GameObject("Shared Coroutine Starter").AddComponent<SharedCoroutineStarter>();
+            if (_instance == null)
+            {
+                _instance = new GameObject("Shared Coroutine Starter").AddComponent<SharedCoroutineStarter>();
+                DontDestroyOnLoad(_instance);
+            }
 
             return ((MonoBehaviour)_instance).StartCoroutine(routine);
         }
